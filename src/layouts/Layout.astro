@@ -1,0 +1,23 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+
+const { title = "title", description = "description", noindex = true } = Astro.props;
+---
+
+<!-- headの中身、global CSSとかScriptの読み込み、bodyの骨格を提供するレイアウトコンポーネント --><!-- これも余計なことはしない -->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+  </head>
+  <body>
+    <Header />
+    <Main />
+    <Footer />
+  </body>
+</html>

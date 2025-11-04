@@ -1,0 +1,9 @@
+---
+// TODO: add interface
+const { titleText = "Section Title", class: className } = Astro.props;
+---
+
+<!-- 基本構造。titleTextはよく使う。上書き用のクラスは使わないことが多いのでいらないかも。 -->
+<div class={className}>
+  <h2 class="section-title">{titleText}</h2>
+</div>

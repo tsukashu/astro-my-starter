@@ -1,0 +1,19 @@
+---
+import SectionTitle from "./ui/SectionTitle.astro";
+
+interface SectionProps {
+  id: string;
+  className?: string;
+}
+
+const { id, className = id } = Astro.props;
+---
+
+<!-- 基本構造(innerクラス+セクションタイトル)。中身はslotでもっと柔軟でもいいかも。 -->
+<section id={id} class={className}>
+  <div class={`section__inner ${className}__inner}`}>
+    <SectionTitle titleText="Hell Nice Title" />
+    <!-- it is test text -->
+    <p class="section__text">Hello Nice Text {className}</p>
+  </div>
+</section>
