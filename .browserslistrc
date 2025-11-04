@@ -1,0 +1,15 @@
+[production]
+last 3 chrome version
+last 3 firefox version
+last 3 safari version
+last 3 edge version
+> 0.2%
+not dead
+
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version
+last 1 edge version
+> 1%
+not dead
