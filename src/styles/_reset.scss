@@ -1,0 +1,132 @@
+/* stylelint-disable property-no-vendor-prefix */
+/*
+  Modern Browser Reset
+  tsukashu 2025
+
+  TODO: refer https://www.tak-dcxi.com/article/introduce-kiso-css
+*/
+
+/* Core reset */
+// no need to @include
+
+:where(*, *::before, *::after) {
+  box-sizing: inherit; /* inherit from html is better */
+}
+
+:where(*) {
+  padding: 0;
+  margin: 0;
+}
+
+/* Dialog margin correction */
+:where(dialog[open]) {
+  margin: revert;
+}
+
+/* prevent scroll when modal is open */
+:where(:root:has(:modal)) {
+  overflow: hidden;
+}
+
+/* Base document styling */
+:where(html) {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* Smooth scroll (conditional) */
+@media (prefers-reduced-motion: no-preference) {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Viewport handling */
+:where(body) {
+  min-height: 100dvh;
+}
+
+/* Base: lists */
+:where(ul, ol) {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+/* Media defaults */
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent SVG bleed */
+:where(svg:focus) {
+  overflow: hidden;
+}
+
+/* Form control reset */
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+:where(input[type="file"]) {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Accessible focus */
+:where(:focus) {
+  outline: none;
+}
+
+:where(:focus-visible) {
+  outline: 2px solid Highlight;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+
+/* Textarea control */
+:where(textarea) {
+  min-height: 3em;
+  resize: vertical;
+}
+
+/* Interactive elements */
+:where(
+  button,
+  label,
+  select,
+  summary,
+  [role="button"],
+  [role="option"],
+  [type="button"],
+  [type="reset"],
+  [type="submit"]
+) {
+  cursor: pointer;
+}
+
+/* Fieldset reset */
+:where(fieldset) {
+  border: none;
+}
+
+/* Text containment */
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+/* Link reset */
+:where(:any-link) {
+  color: inherit;
+  text-decoration-color: transparent;
+}

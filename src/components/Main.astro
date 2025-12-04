@@ -1,8 +1,30 @@
 ---
-import Section from "@/components/Section.astro";
+
 ---
 
-<!-- メインコンテンツの配置と、レイアウトをするためだけのコンポーネント。とにかく余計なことはしない。 --><!-- TODO: slotを使ってbase.cssに投げた方が柔軟かも。あー絶対そうだそうしよう -->
-<Section id="test" />
-<Section id="test2" className="test2" />
-<Section id="test3" className="test test3" />
+<main>
+  <section id="sample1" class="sample1">
+    <div class="sample1__inner">
+      <h2 class="sample1__title">サンプルセクション 1</h2>
+      <p class="sample1__text">
+        これはサンプルセクション1のパラグラフです。コンテンツのレイアウト確認用のテキストです。
+      </p>
+    </div>
+  </section>
+
+  <section id="sample2" class="sample2">
+    <div class="sample2__inner">
+      <h2 class="sample2__title">サンプルセクション 2</h2>
+      <p class="sample2__text">これはサンプルセクション2のパラグラフです。適当なテキストで構成されています。</p>
+    </div>
+  </section>
+
+  <section id="sample3" class="sample3">
+    <div class="sample3__inner">
+      <h2 class="sample3__title">サンプルセクション 3</h2>
+      <p class="sample3__text">
+        これはサンプルセクション3のパラグラフです。レイアウトとスタイルの確認に利用してください。
+      </p>
+    </div>
+  </section>
+</main>
