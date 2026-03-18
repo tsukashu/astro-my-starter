@@ -8,35 +8,31 @@ pnpm create astro@latest -- --template minimal
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
 /
-├── public/
+├── public/              # 静的ファイル
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/      # コンポーネント (Header, Footer, Main)
+│   ├── layouts/         # レイアウト
+│   ├── pages/
+│   │   └── index.astro  # トップページ
+│   └── styles/          # SCSSファイル
+└── package.json         # 依存関係とスクリプト
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Astroは `src/pages/` ディレクトリの `.astro` ファイルをページとして認識します。
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| コマンド         | 説明                                |
+| :--------------- | :---------------------------------- |
+| `pnpm install`   | 依存関係をインストール              |
+| `pnpm dev`       | 開発サーバー起動 (localhost:4321)   |
+| `pnpm build`     | 本番ビルド (./dist/に出力)          |
+| `pnpm preview`   | ビルドプレビュー                    |
+| `pnpm lint`      | コードチェック (ESLint + Stylelint) |
+| `pnpm lint:fix`  | コード自動修正                      |
+| `pnpm astro ...` | Astro CLI実行                       |
 
 ## 👀 Want to learn more?
 
