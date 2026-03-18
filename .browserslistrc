@@ -1,15 +1,11 @@
 [production]
-last 3 chrome version
-last 3 firefox version
-last 3 safari version
-last 3 edge version
-> 0.2%
+# 全主要ブラウザで2.5年以上経過し、安定している機能のみを許可
+supports baseline-widely-available
+# 念のため、現在のアクティブなブラウザもカバー（死んでいるブラウザは除外）
 not dead
 
 [development]
-last 1 chrome version
-last 1 firefox version
-last 1 safari version
-last 1 edge version
-> 1%
-not dead
+# 開発中は最新の機能をそのまま使いたいので、新しく登場した機能まで含める
+supports baseline-newly-available
+# 自分の最新ブラウザ（Chrome/Edge等）で動けばOK
+last 1 version
