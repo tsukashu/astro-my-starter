@@ -16,8 +16,8 @@
   dialog のみ除外: margin: auto（中央揃え）と padding の両方を保護する
 */
 *:not(dialog) {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /*
@@ -35,7 +35,6 @@
 
 /* iOS Safari でのフォントサイズ自動調整を無効化 */
 html {
-  -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
